@@ -66,7 +66,7 @@ gender = st.selectbox(
     options=list(GENDER_CHOICE.keys()), format_func=gender_func)
 
 #with open('model.pkl', 'rb') as model_file:
-    model = pickle.load(open('modelas.sav', 'rb'))
+model = pickle.load(open('modelas.sav', 'rb'))
 
 # Create a Streamlit UI
 predict_button = st.button('Predict')
