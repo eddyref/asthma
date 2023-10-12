@@ -1,7 +1,7 @@
 #import library
 
 import streamlit as st
-import joblib
+#import joblib
 
 #make choice box
 AGE = {0: '0-9', 1: '10-19', 2: '20-24', 3: '25-59', 4: '60+'}
