@@ -3,7 +3,7 @@ import streamlit as st
 #import joblib
 #load saved models
 import pickle
-
+from sklearn.linear_model import LogisticRegression
 #make choice box
 AGE = {0: '0-9', 1: '10-19', 2: '20-24', 3: '25-59', 4: '60+'}
 CHOICES = {0: "No", 1: "Yes"}
@@ -66,7 +66,7 @@ gender = st.selectbox(
     options=list(GENDER_CHOICE.keys()), format_func=gender_func)
 
 with open('model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file, 'rb'))
+    model = pickle.load(model_file)
 
 # Create a Streamlit UI
 predict_button = st.button('Predict')
