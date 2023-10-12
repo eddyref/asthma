@@ -1,6 +1,8 @@
 #import library
 import streamlit as st
 #import joblib
+#load saved models
+import pickle
 
 #make choice box
 AGE = {0: '0-9', 1: '10-19', 2: '20-24', 3: '25-59', 4: '60+'}
@@ -63,10 +65,8 @@ gender = st.selectbox(
     'Gender', 
     options=list(GENDER_CHOICE.keys()), format_func=gender_func)
 
-#load saved models
-import pickle
 #with open('model.pkl', 'rb') as model_file:
-    model = pickle.load(open('model.pkl', 'rb'))
+    model = pickle.load(open('modelas.sav', 'rb'))
 
 # Create a Streamlit UI
 predict_button = st.button('Predict')
