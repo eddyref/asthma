@@ -10,7 +10,7 @@ CHOICES = {0: "No", 1: "Yes"}
 GENDER_CHOICE = {0: "Male", 1: "Female"}
 
 st.title('Asthma Prediction')
-st.title('Please enter the symptoms you are experiencing :blue[cool] :sunglasses:')
+st.title(':blue[Please enter the symptoms you are experiencing] :sunglasses:')
 
 def gender_func(option):
     return GENDER_CHOICE[option]
