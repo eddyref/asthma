@@ -9,7 +9,8 @@ AGE = {0: '0-9', 1: '10-19', 2: '20-24', 3: '25-59', 4: '60+'}
 CHOICES = {0: "No", 1: "Yes"}
 GENDER_CHOICE = {0: "Male", 1: "Female"}
 
-st.title('Please Insert The Informations')
+st.title('Asthma Prediction')
+st.title('Please enter the symptoms you are experiencing :blue[cool] :sunglasses:')
 
 def gender_func(option):
     return GENDER_CHOICE[option]
@@ -70,6 +71,7 @@ with open('model.pkl', 'rb') as model_file:
 
 # Create a Streamlit UI
 predict_button = st.button('Predict')
+st.text('copyright@by Eddy R')
 
 if predict_button:
     #criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, none_sympton, pains, nasal_congestion, runny_nose, none_experiencing, age_range, gender]
