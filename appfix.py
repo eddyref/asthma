@@ -11,7 +11,7 @@ GENDER_CHOICE = {0: "Male", 1: "Female"}
 
 st.title('Asthma Prediction')
 st.title(':blue[Please enter the symptoms you are experiencing] :sunglasses:')
-
+st.text('copyright@by Eddy Refianto')
 def gender_func(option):
     return GENDER_CHOICE[option]
 
@@ -87,4 +87,4 @@ if predict_button:
     # Display the prediction
     st.write(f'Severity: {label_text}')
     
-st.text('copyright@by Eddy R')
+
