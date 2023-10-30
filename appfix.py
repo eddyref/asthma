@@ -73,8 +73,8 @@ with open('model.pkl', 'rb') as model_file:
 predict_button = st.button('Predict')
 
 if predict_button:
-    #criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, none_sympton, pains, nasal_congestion, runny_nose, none_experiencing, age_range, gender]
-    criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, pains, nasal_congestion, runny_nose, age_range, gender]
+    criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, none_sympton, pains, nasal_congestion, runny_nose, none_experiencing, age_range, gender]
+    #criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, pains, nasal_congestion, runny_nose, age_range, gender]
     prediction = model.predict([criteria])[0]  # Assuming model.predict takes a list of criteria
 
     if prediction == 0:
