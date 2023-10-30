@@ -38,9 +38,9 @@ sore_throat = st.selectbox(
     'Sore Throat', 
     options=list(CHOICES.keys()), format_func=format_func)
 
-#none_sympton = st.selectbox(
-#    'None Sympton', 
-#    options=list(CHOICES.keys()), format_func=format_func)
+none_sympton = st.selectbox(
+    'None Sympton', 
+    options=list(CHOICES.keys()), format_func=format_func)
 
 pains = st.selectbox(
     'Pains', 
@@ -54,9 +54,9 @@ runny_nose = st.selectbox(
     'Runny Nose', 
     options=list(CHOICES.keys()), format_func=format_func)
 
-#none_experiencing = st.selectbox(
-#    'None Experiencing', 
-#    options=list(CHOICES.keys()), format_func=format_func)
+none_experiencing = st.selectbox(
+    'None Experiencing', 
+    options=list(CHOICES.keys()), format_func=format_func)
 
 age_range = st.selectbox(
     'Age Range', 
@@ -71,7 +71,6 @@ with open('model.pkl', 'rb') as model_file:
 
 # Create a Streamlit UI
 predict_button = st.button('Predict')
-st.text('copyright@by Eddy R')
 
 if predict_button:
     #criteria = [tiredness, dry_cough, difficulty_in_breathing, sore_throat, none_sympton, pains, nasal_congestion, runny_nose, none_experiencing, age_range, gender]
@@ -87,3 +86,5 @@ if predict_button:
 
     # Display the prediction
     st.write(f'Severity: {label_text}')
+    
+st.text('copyright@by Eddy R')
